@@ -14,7 +14,7 @@ var JADEJA = 40;
 var BRAVO = 0;
 
 //KKR
-var RUSSELL = 0;
+var RUSSELL = 100;
 var NARINE = 0;
 var KULDEEP = 0;
 var GILL = 0;
