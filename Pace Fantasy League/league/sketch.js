@@ -213,7 +213,7 @@ function Leaders() {
 }
 
 function Chiggy() {
-    scores["Chiggy"] += KLR * 2 + VIHARI + BUMRAH + JADEJA + SMITH * 1.5 + CUMMINS + LABUSCHAGNE;
+    scores["Chiggy"] += KLR * 2 + VIHARI + BUMRAH + JADEJA + SMITH * 1.5 + CUMMINS + LABUSCHAGNE-3000;
 }
 
 function Zuber() {
