@@ -1,40 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const items = document.querySelectorAll(".experience-item");
-
-    function checkScroll() {
-        const triggerBottom = window.innerHeight * 0.85;
-
-        items.forEach(item => {
-            const itemTop = item.getBoundingClientRect().top;
-            if (itemTop < triggerBottom) {
-                item.classList.add("visible");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", checkScroll);
-    checkScroll();
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const tags = document.querySelectorAll(".tech-tag");
-
-    function revealTags() {
-        tags.forEach((tag, index) => {
-            setTimeout(() => {
-                tag.classList.add("visible");
-            }, index * 100); // Staggered effect
-        });
-    }
-
-    revealTags();
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    document.body.classList.add("loaded");
-});
-
-document.addEventListener("DOMContentLoaded", function () {
+    // Handle fade-in animations and experience items consistently
     const observer = new IntersectionObserver(
         (entries, observer) => {
             entries.forEach(entry => {
@@ -44,10 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         },
-        { threshold: 0.2 } // Trigger animation when 20% of the section is in view
+        { threshold: 0.2 } // Trigger when 20% visible
     );
 
-    document.querySelectorAll(".fade-in").forEach(section => {
-        observer.observe(section);
+    // Observe all fade-in elements and experience items
+    document.querySelectorAll(".fade-in, .experience-item").forEach(el => observer.observe(el));
+
+    // Staggered animation for tech tags
+    const tags = document.querySelectorAll(".tech-tag");
+    tags.forEach((tag, index) => {
+        setTimeout(() => {
+            tag.classList.add("visible");
+        }, index * 100); // Stagger effect
     });
+
+    // Page-wide loaded class
+    document.body.classList.add("loaded");
 });
