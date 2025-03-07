@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
     // Observe all fade-in elements and experience items
-    document.querySelectorAll(".fade-in, .experience-item").forEach(el => observer.observe(el));
+    document.querySelectorAll(".fade-in, .experience-item, .education-item, .project-item, .publication-item").forEach(el => observer.observe(el));
 
     // Staggered animation for tech tags
     const tags = document.querySelectorAll(".tech-tag");
