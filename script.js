@@ -26,3 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Page-wide loaded class
     document.body.classList.add("loaded");
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Stagger social icons
+  const icons = document.querySelectorAll('.social-icons a');
+  icons.forEach((icon, i) => {
+    setTimeout(() => {
+      icon.classList.add('icon-visible');
+    }, i * 150);
+  });
+});
