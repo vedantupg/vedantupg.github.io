@@ -36,3 +36,20 @@ document.addEventListener("DOMContentLoaded", function() {
     }, i * 150);
   });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const aboutText = document.getElementById("aboutText");
+  const toggleBtn = document.getElementById("toggleBtn");
+  
+  // Track whether it's expanded or not
+  let isExpanded = false;
+  
+  toggleBtn.addEventListener("click", function() {
+    // Toggle the 'expanded' class on the collapsible container
+    aboutText.classList.toggle("expanded");
+    
+    // Flip the state and update the button text
+    isExpanded = !isExpanded;
+    toggleBtn.textContent = isExpanded ? "Read Less" : "Read More";
+  });
+});
