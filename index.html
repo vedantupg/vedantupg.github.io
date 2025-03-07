@@ -334,9 +334,25 @@
             font-size: 10px; /* Slightly smaller font to match navbar aesthetics */
         }
 
+        .download-btn {
+            background-color: #917fb3; /* Dark color to match navbar's darker theme */
+            color: white;
+            border: 2px solid #ffffff; /* Slight border to match the navbar style */
+            padding: 12px 25px; /* Added some padding to make the button more noticeable */
+            margin-left: 30px; /* Adjusted margin to align with navbar items */
+            text-transform: uppercase;
+            font-weight: 600; /* Slightly less bold for a more balanced look */
+            border-radius: 30px; /* Rounded corners to match the modern feel */
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+            font-size: 10px; /* Slightly smaller font to match navbar aesthetics */
+        }
+
         .download-btn:hover {
-            background-color: #070808; /* Lighter color for hover */
-            border-color: #0056b3; /* Border color matches the hover background */
+            color: #917fb3;
+            background-color: white; /* Lighter color for hover */
+            border-color: #917fb3; /* Border color matches the hover background */
             transform: scale(1.05); /* Slight scaling effect to indicate interactivity */
         }
 
@@ -344,6 +360,17 @@
             outline: none; /* Remove outline on focus to keep it sleek */
         }
 
+        .institution-logo {
+            width: 40px; /* Adjust the size of the logo */
+            height: auto;
+            margin-right: 10px; /* Space between logo and text */
+            vertical-align: middle; /* Align logo with text */
+        }
+
+        .item-header-left {
+            display: flex;
+            align-items: center;
+        }   
 
         @media (max-width: 768px) {
             .header-content {
@@ -544,6 +571,8 @@
             <div class="experience-container">
                 <div class="experience-item">
                     <div class="item-header">
+                        <div class="item-header-left">
+                            <img src="uf-logo.png" alt="University of Florida" class="institution-logo">
                         <div>
                             <h3 class="item-title">Graduate Research Assistant</h3>
                             <p class="item-subtitle">College of Nursing, University of Florida</p>
@@ -572,6 +601,8 @@
                 </div>
                 <div class="experience-item">
                     <div class="item-header">
+                        <div class="item-header-left">
+                            <img src="sap-logo.jpg" alt="SAP" class="institution-logo">
                         <div>
                             <h3 class="item-title">Associate Developer</h3>
                             <p class="item-subtitle">SAP Labs India Pvt. Ltd</p>
@@ -609,6 +640,8 @@
             <div class="education-container">
                 <div class="education-item">
                     <div class="item-header">
+                        <div class="item-header-left">
+                            <img src="uf-logo.png" alt="University of Florida" class="institution-logo">
                         <div>
                             <h3 class="item-title">Master of Science in Computer Science</h3>
                             <p class="item-subtitle">University of Florida</p>
@@ -622,6 +655,8 @@
                 </div>
                 <div class="education-item">
                     <div class="item-header">
+                        <div class="item-header-left">
+                            <img src="bits-logo.png" alt="University of Florida" class="institution-logo">
                         <div>
                             <h3 class="item-title">Master of Technology in Software Engineering</h3>
                             <p class="item-subtitle">BITS Pilani Work Integrated Learning Programme (sponsored by SAP Labs India)</p>
@@ -635,6 +670,8 @@
                 </div>
                 <div class="education-item">
                     <div class="item-header">
+                        <div class="item-header-left">
+                            <img src="pccoe-logo.png" alt="University of Florida" class="institution-logo">
                         <div>
                             <h3 class="item-title">Bachelor of Engineering in Computer Engineering</h3>
                             <p class="item-subtitle">Pimpri Chinchwad College of Engineering</p>
