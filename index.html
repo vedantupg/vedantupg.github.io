@@ -19,7 +19,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
 
         body {
@@ -96,6 +96,7 @@
         .nav-container {
             display: flex;
             justify-content: center;
+            align-items: center;
             padding: 1rem 0;
         }
 
@@ -318,6 +319,32 @@
             color: var(--accent);
         }
 
+        .download-btn {
+            background-color: #917fb3; /* Dark color to match navbar's darker theme */
+            color: white;
+            border: 2px solid #070808; /* Slight border to match the navbar style */
+            padding: 12px 25px; /* Added some padding to make the button more noticeable */
+            margin-left: 30px; /* Adjusted margin to align with navbar items */
+            text-transform: uppercase;
+            font-weight: 600; /* Slightly less bold for a more balanced look */
+            border-radius: 30px; /* Rounded corners to match the modern feel */
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+            font-size: 10px; /* Slightly smaller font to match navbar aesthetics */
+        }
+
+        .download-btn:hover {
+            background-color: #070808; /* Lighter color for hover */
+            border-color: #0056b3; /* Border color matches the hover background */
+            transform: scale(1.05); /* Slight scaling effect to indicate interactivity */
+        }
+
+        .download-btn:focus {
+            outline: none; /* Remove outline on focus to keep it sleek */
+        }
+
+
         @media (max-width: 768px) {
             .header-content {
                 padding: 1rem 0;
@@ -375,22 +402,6 @@
             .skill-category, .experience-item, .education-item, .project-item, .publication-item {
                 padding: 1.2rem;
             }
-
-             .download-btn {
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        text-transform: uppercase;
-        font-weight: bold;
-        border-radius: 5px;
-        cursor: pointer;
-        text-decoration: none;
-        }
-
-    .download-btn:hover {
-        background-color: #0056b3;
-    }
         }
     </style>
 </head>
@@ -404,6 +415,9 @@
                 <a href="mailto:vedantupganlawar05@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 <a href="https://linkedin.com/in/vedantupganlawar" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/vedantupg" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/vedantupg" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://scholar.google.com/citations?hl=en&user=88ep3qIAAAAJ" target="_blank" aria-label="Google Scholar"><i class="fab fa-google"></i></a>
+
             </div>
         </div>
     </header>
