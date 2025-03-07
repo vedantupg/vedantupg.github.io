@@ -414,6 +414,51 @@
             transform: translateY(0);
         }
 
+        /* Collapsible container */
+        .collapsible {
+          max-height: 200px;           /* Limit height when collapsed */
+          overflow: hidden;            /* Hide the overflow text */
+          transition: max-height 0.4s ease-out;  /* Smooth expansion */
+          position: relative;
+        }
+        
+        /* A subtle gradient fade at the bottom when text is clipped */
+        .collapsible::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 50px; /* Height of fade-out effect */
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f9f9f9 80%);
+          pointer-events: none;
+        }
+        
+        /* Expanded state — remove the max-height and gradient fade */
+        .collapsible.expanded {
+          max-height: 1000px; /* a large enough max-height to display all text */
+        }
+        .collapsible.expanded::after {
+          display: none;
+        }
+        
+        /* Toggle button styling */
+        .toggle-btn {
+          background-color: var(--secondary); 
+          color: #fff;
+          border: none;
+          padding: 0.8rem 1.2rem;
+          margin-top: 1rem;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 1rem;
+          transition: background-color 0.3s ease;
+        }
+        
+        .toggle-btn:hover {
+          background-color: var(--primary);
+        }
+
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-5px); }
