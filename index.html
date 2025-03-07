@@ -375,6 +375,22 @@
             .skill-category, .experience-item, .education-item, .project-item, .publication-item {
                 padding: 1.2rem;
             }
+
+             .download-btn {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        }
+
+    .download-btn:hover {
+        background-color: #0056b3;
+    }
         }
     </style>
 </head>
@@ -393,18 +409,21 @@
     </header>
 
     <nav>
-        <div class="container nav-container">
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="container nav-container">
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="resume.pdf" download>
+            <button class="download-btn">Download CV</button>
+        </a>
+    </div>
+</nav>
 
     <section id="about">
         <div class="container">
