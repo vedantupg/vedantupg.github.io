@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vedant Upganlawar | AI/ML Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
         :root {
             --primary: #2a2f4f;
@@ -59,13 +58,7 @@
             border: 5px solid rgba(255, 255, 255, 0.3);
             object-fit: cover;
             margin-bottom: 1.5rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .profile-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
         }
 
         h1 {
@@ -90,12 +83,6 @@
         .social-icons a {
             color: white;
             font-size: 1.5rem;
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            color: var(--accent);
-            transform: translateY(-3px);
         }
 
         nav {
@@ -124,26 +111,10 @@
             font-weight: 500;
             padding: 0.5rem 0;
             position: relative;
-            transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
             color: var(--secondary);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: var(--secondary);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
         }
 
         section {
@@ -198,12 +169,6 @@
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
         .skill-category h3 {
@@ -227,12 +192,6 @@
             border-radius: 4px;
             font-size: 0.9rem;
             border: 1px solid #e0e0e0;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .skill-item:hover {
-            background-color: var(--accent);
-            transform: scale(1.05);
         }
 
         .experience-container, .education-container, .projects-container, .publications-container {
@@ -246,14 +205,8 @@
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
-        }
-
-        .experience-item:hover, .education-item:hover, .project-item:hover, .publication-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
         .experience-item::before, .education-item::before, .project-item::before, .publication-item::before {
@@ -363,46 +316,6 @@
 
         .footer-links a {
             color: var(--accent);
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: white;
-        }
-
-        .scroll-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background-color: var(--secondary);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
-        }
-
-        .scroll-top.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .scroll-top:hover {
-            background-color: var(--primary);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-            color: var(--dark);
         }
 
         @media (max-width: 768px) {
@@ -422,41 +335,9 @@
                 font-size: 1.8rem;
             }
 
-            .nav-container {
-                justify-content: space-between;
-                padding: 1rem 20px;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
             .nav-links {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                flex-direction: column;
-                background-color: white;
-                gap: 0;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            }
-
-            .nav-links.active {
-                max-height: 300px;
-            }
-
-            .nav-links li {
-                width: 100%;
-            }
-
-            .nav-links a {
-                display: block;
-                padding: 1rem 20px;
-                border-bottom: 1px solid #eee;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             .about-content, .experience-container, .education-container, .projects-container {
@@ -495,39 +376,24 @@
                 padding: 1.2rem;
             }
         }
-
-        /* Animation classes */
-        .fade-up {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-
-        .fade-up.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
     </style>
 </head>
 <body>
     <header>
         <div class="container header-content">
-            <img src="profile.png" alt="Vedant Upganlawar" class="profile-img">
+            <img src="./profile-image.jpg" alt="Vedant Upganlawar" class="profile-img">
             <h1>Vedant Upganlawar</h1>
             <p class="subtitle">AI/ML Engineer | RAG Specialist | Full Stack Developer</p>
             <div class="social-icons">
                 <a href="mailto:vedantupganlawar05@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 <a href="https://linkedin.com/in/vedantupganlawar" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/vedantupg" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </header>
 
     <nav>
         <div class="container nav-container">
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -542,9 +408,9 @@
 
     <section id="about">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div class="about-text" data-aos="fade-up" data-aos-delay="100">
+                <div class="about-text">
                     <p>I am an <span class="highlight">AI/ML Engineer</span> with expertise in developing high-performance Retrieval Augmented Generation (RAG) systems and machine learning solutions. Currently pursuing my Master's in Computer Science at the University of Florida, I specialize in NLP, text embeddings, and advanced prompt engineering techniques.</p>
                     <p>My research work at the College of Nursing, University of Florida focuses on optimizing RAG pipelines to standardize nursing data across major health systems. With a background in software engineering at SAP Labs India, I combine strong technical skills with practical industry experience.</p>
                     <p>I'm passionate about exploring the intersection of AI and healthcare, creating efficient data processing pipelines, and building intuitive user interfaces that enhance the usability of complex systems.</p>
@@ -555,9 +421,9 @@
 
     <section id="skills" style="background-color: #f5f7fa;">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
+            <h2 class="section-title">Technical Skills</h2>
             <div class="skills-container">
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                <div class="skill-category">
                     <h3><i class="fas fa-laptop-code"></i> Programming</h3>
                     <div class="skill-list">
                         <span class="skill-item">Java</span>
@@ -570,7 +436,7 @@
                         <span class="skill-item">Bash</span>
                     </div>
                 </div>
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-category">
                     <h3><i class="fas fa-database"></i> Databases</h3>
                     <div class="skill-list">
                         <span class="skill-item">SQL</span>
@@ -580,7 +446,7 @@
                         <span class="skill-item">ChromaDB</span>
                     </div>
                 </div>
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                <div class="skill-category">
                     <h3><i class="fas fa-globe"></i> Web Development</h3>
                     <div class="skill-list">
                         <span class="skill-item">HTML</span>
@@ -594,7 +460,7 @@
                         <span class="skill-item">FastAPI</span>
                     </div>
                 </div>
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                <div class="skill-category">
                     <h3><i class="fas fa-cloud"></i> Cloud & Infrastructure</h3>
                     <div class="skill-list">
                         <span class="skill-item">AWS</span>
@@ -605,7 +471,7 @@
                         <span class="skill-item">Git</span>
                     </div>
                 </div>
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                <div class="skill-category">
                     <h3><i class="fas fa-tools"></i> Tools & Frameworks</h3>
                     <div class="skill-list">
                         <span class="skill-item">Langchain</span>
@@ -616,7 +482,7 @@
                         <span class="skill-item">HiperGator</span>
                     </div>
                 </div>
-                <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
+                <div class="skill-category">
                     <h3><i class="fas fa-brain"></i> AI/ML/NLP</h3>
                     <div class="skill-list">
                         <span class="skill-item">PyTorch</span>
@@ -640,9 +506,9 @@
 
     <section id="experience">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Work Experience</h2>
+            <h2 class="section-title">Work Experience</h2>
             <div class="experience-container">
-                <div class="experience-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="experience-item">
                     <div class="item-header">
                         <div>
                             <h3 class="item-title">Graduate Research Assistant</h3>
@@ -667,7 +533,7 @@
                         <span class="tech-tag">HiperGator</span>
                     </div>
                 </div>
-                <div class="experience-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="experience-item">
                     <div class="item-header">
                         <div>
                             <h3 class="item-title">Associate Developer</h3>
@@ -702,9 +568,9 @@
 
     <section id="education" style="background-color: #f5f7fa;">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Education</h2>
+            <h2 class="section-title">Education</h2>
             <div class="education-container">
-                <div class="education-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="education-item">
                     <div class="item-header">
                         <div>
                             <h3 class="item-title">Master of Science in Computer Science</h3>
@@ -717,7 +583,7 @@
                         <p>Gainesville FL, United States</p>
                     </div>
                 </div>
-                <div class="education-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="education-item">
                     <div class="item-header">
                         <div>
                             <h3 class="item-title">Master of Technology in Software Engineering</h3>
@@ -730,7 +596,7 @@
                         <p>Bangalore, Karnataka, India</p>
                     </div>
                 </div>
-                <div class="education-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="education-item">
                     <div class="item-header">
                         <div>
                             <h3 class="item-title">Bachelor of Engineering in Computer Engineering</h3>
@@ -749,9 +615,9 @@
 
     <section id="projects">
         <div class="container">
-            <h2 class="section-title" data-aos="fade-up">Projects</h2>
+            <h2 class="section-title">Projects</h2>
             <div class="projects-container">
-                <div class="project-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-item">
                     <div class="item-header">
                         <div>
                             <h3 class="item-title">QuickQuizz, AI-Powered Interactive Learning Web App</h3>
@@ -769,7 +635,7 @@
                         <span class="tech-tag">OpenAI API</span>
                     </div>
                 </div>
-                <div class="project-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-item">
                     <div class="item-header">
                         <div>
                             <h3 class="item-title">Multimodal Movie Genre Classification</h3>
@@ -785,7 +651,113 @@
                         <span class="tech-tag">Natural Language Processing</span>
                     </div>
                 </div>
-                <div class="project-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-item">
                     <div class="item-header">
                         <div>
-                            <h3 class="item-title">Audio Classification:
+                            <h3 class="item-title">Audio Classification: Progressive Rock vs. Non Progressive Rock Music</h3>
+                        </div>
+                        <p class="item-date">April 2024</p>
+                    </div>
+                    <div class="item-description">
+                        <p>Executed audio algorithms using a CNN-based model in PyTorch to classify songs into progressive rock and non-progressive rock categories, achieving 82% classification accuracy, validated through rigorous testing.</p>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">Audio Processing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" style="background-color: #f5f7fa;">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <div class="publications-container">
+                <div class="publication-item">
+                    <div class="item-header">
+                        <div>
+                            <h3 class="item-title">Weighted Blending Fusion for Low Illumination Imagery Enhancement</h3>
+                        </div>
+                        <p class="item-date">June 2021</p>
+                    </div>
+                    <div class="item-description">
+                        <p>Presented at ICICNIS Conference, June 2021.</p>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Image Processing</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">Contrast Enhancement</span>
+                    </div>
+                </div>
+                <div class="publication-item">
+                    <div class="item-header">
+                        <div>
+                            <h3 class="item-title">Fusion Based Approach for Enhancement of Low-Illumination Imagery</h3>
+                        </div>
+                        <p class="item-date">May 2021</p>
+                    </div>
+                    <div class="item-description">
+                        <p>Presented at INCET Conference, May 2021.</p>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Hybrid model</span>
+                        <span class="tech-tag">Color Preservation</span>
+                        <span class="tech-tag">Image Enhancement</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>vedantupganlawar05@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(+1) (352)709-7536</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Gainesville, Florida, USA</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://linkedin.com/in/vedantupganlawar" target="_blank">linkedin.com/in/vedantupganlawar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="footer-text">© 2025 Vedant Upganlawar. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="mailto:vedantupganlawar05@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/vedantupganlawar" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll to section script
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
