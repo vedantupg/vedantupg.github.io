@@ -33,3 +33,21 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.add("loaded");
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target); // Stop observing once visible
+                }
+            });
+        },
+        { threshold: 0.2 } // Trigger animation when 20% of the section is in view
+    );
+
+    document.querySelectorAll(".fade-in").forEach(section => {
+        observer.observe(section);
+    });
+});
