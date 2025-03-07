@@ -213,7 +213,7 @@
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
 
-        .experience-item.visible {
+        .experience-item.visible , .education-item.visible, .project-item.visible, .publication-item.visible{
             opacity: 1;
             transform: translateX(0);
         }
