@@ -9,10 +9,19 @@
 </head>
 <body>
     <header>
+
+        <div class="parallax-container">
+          <div class="parallax-layer mountains" data-speed="0.1"></div>
+          <div class="parallax-layer clouds" data-speed="0.05"></div>
+          <div class="parallax-layer stars" data-speed="0.02"></div>
+        </div>
+        
         <div class="container header-content">
             <img src="./profile.png" alt="Vedant Upganlawar" class="profile-img">
             <h1>Vedant Upganlawar</h1>
-            <p class="subtitle">AI/ML Engineer | RAG Specialist | Full Stack Developer</p>
+            <div class="typing-container">
+            <p class="typing-text">AI/ML Engineer | RAG Specialist | Full Stack Developer</p>
+              </div>
             <div class="social-icons">
                 <a href="mailto:vedantupganlawar05@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 <a href="https://linkedin.com/in/vedantupganlawar" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -22,6 +31,34 @@
 
             </div>
         </div>
+
+
+        <div class="animated-icons-container">
+    <div class="animated-icon" id="ai-icon">
+      <svg viewBox="0 0 100 100" width="60" height="60">
+        <circle class="brain-circle" cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2"/>
+        <path class="brain-path" d="M30,50 Q50,30 70,50 Q50,70 30,50" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round"/>
+        <path class="brain-path-2" d="M40,40 Q50,35 60,40" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round"/>
+        <path class="brain-path-3" d="M40,60 Q50,65 60,60" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="animated-icon" id="ml-icon">
+      <svg viewBox="0 0 100 100" width="60" height="60">
+        <rect class="data-rect" x="20" y="30" width="10" height="40" fill="rgba(255,255,255,0.5)" rx="2"/>
+        <rect class="data-rect" x="40" y="20" width="10" height="60" fill="rgba(255,255,255,0.6)" rx="2"/>
+        <rect class="data-rect" x="60" y="40" width="10" height="30" fill="rgba(255,255,255,0.7)" rx="2"/>
+        <line class="trend-line" x1="25" y1="45" x2="75" y2="55" stroke="rgba(253,226,243,0.9)" stroke-width="2" stroke-dasharray="5,3"/>
+      </svg>
+    </div>
+    <div class="animated-icon" id="code-icon">
+      <svg viewBox="0 0 100 100" width="60" height="60">
+        <path class="code-bracket" d="M30,40 L20,50 L30,60" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="3" stroke-linecap="round"/>
+        <path class="code-bracket" d="M70,40 L80,50 L70,60" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="3" stroke-linecap="round"/>
+        <line class="code-line" x1="40" y1="30" x2="60" y2="70" stroke="rgba(253,226,243,0.9)" stroke-width="2"/>
+      </svg>
+    </div>
+  </div>
+</div>
     </header>
 
     <nav>
