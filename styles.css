@@ -502,10 +502,13 @@
         
         /* Typing Text Effect */
         .typing-container {
-          height: 1.5em;
-          margin-bottom: 1.5rem;
           display: flex;
           justify-content: center;
+          align-items: center;
+        
+          /* At least this tall, so blank space never goes to 0 */
+          min-height: 1.5em;
+          margin-bottom: 1.5rem;
         }
         
         .typing-text {
