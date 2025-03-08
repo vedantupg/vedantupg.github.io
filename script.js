@@ -53,3 +53,74 @@ document.addEventListener("DOMContentLoaded", function() {
     toggleBtn.textContent = isExpanded ? "Read Less" : "Read More";
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Typing effect
+  const typingElement = document.querySelector('.typing-text');
+  const phrases = [
+    "AI/ML Engineer",
+    "RAG Specialist",
+    "Full Stack Developer"
+  ];
+  
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typeSpeed = 100;
+  
+  function typeWriter() {
+    const currentPhrase = phrases[phraseIndex];
+    
+    if (isDeleting) {
+      // Removing characters
+      typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+      charIndex--;
+      typeSpeed = 50; // Faster when deleting
+    } else {
+      // Adding characters
+      typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+      charIndex++;
+      typeSpeed = 100; // Normal speed when typing
+    }
+    
+    // If word is complete
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      // Pause at the end of phrase
+      isDeleting = true;
+      typeSpeed = 1500; // Wait before deleting
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      // Move to next phrase
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      // Pause before typing next phrase
+      typeSpeed = 500;
+    }
+    
+    setTimeout(typeWriter, typeSpeed);
+  }
+  
+  // Start the typing effect
+  setTimeout(typeWriter, 1000);
+  
+  // Parallax effect
+  const parallaxLayers = document.querySelectorAll('.parallax-layer');
+  
+  window.addEventListener('scroll', function() {
+    const scrollPosition = window.pageYOffset;
+    
+    parallaxLayers.forEach(layer => {
+      const speed = layer.getAttribute('data-speed');
+      const yPos = -(scrollPosition * speed);
+      layer.style.transform = `translateY(${yPos}px)`;
+    });
+  });
+  
+  // Additional animation for social icons
+  const icons = document.querySelectorAll('.social-icons a');
+  icons.forEach((icon, i) => {
+    setTimeout(() => {
+      icon.classList.add('icon-visible');
+    }, i * 150 + 1000); // Delay after page load
+  });
+});
